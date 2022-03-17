@@ -8,6 +8,7 @@ const store = useStore()
   <p>
     <router-link to="/">Go to Home</router-link>
     <router-link to="/about">Go to About</router-link>
+    <router-link to="/hello">Go to HelloWorld</router-link>
   </p>
   <button @click="store.counter++">Counter: {{ store.counter }}</button>
   <router-view></router-view>
