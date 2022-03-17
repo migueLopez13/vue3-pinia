@@ -1,6 +1,6 @@
 <script setup lang="ts">
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
+import { useStore } from './state/store';
+const store = useStore()
 </script>
 
 <template>
@@ -9,6 +9,7 @@
     <router-link to="/">Go to Home</router-link>
     <router-link to="/about">Go to About</router-link>
   </p>
+  <button @click="store.counter++">Counter: {{ store.counter }}</button>
   <router-view></router-view>
 </template>
 
